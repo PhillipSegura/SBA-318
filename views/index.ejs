@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dance Tutoring</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .fade-in {
+        animation: fadeIn 2s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      body {
+        display: grid;
+        grid-template-columns: 3fr;
+        grid-template-rows: 200px 1fr 50px;
+      }
+
+      header {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+      }
+      main {
+        margin: auto;
+        display: flex;
+        align-items: center;
+      }
+      h2,
+      p {
+        margin: 20px;
+      }
+
+      footer {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+      }
+    </style>
+  </head>
+  <body background="../media/arizona-simple-animated.mp4">
+    <video.background-clip>
+      <video autoplay loop muted playsinline class="background-clip">
+        <source src="../media/arizona-simple-animated.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </video.background-clip>
+    <header>
+      <h1 class="fade-in">Welcome to Dance Tutoring</h1>
+      <img
+        src="https://media3.giphy.com/media/tHIRLHtNwxpjIFqPdV/giphy.webp?cid=790b7611dok5vketqnkr3bd88f6dre19g6co3ugylsqqwhvj&ep=v1_gifs_search&rid=giphy.webp&ct=g"
+        width="40"
+        alt=""
+      />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="updates.html">Updates</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <section>
+            <h2>Who are you? How do you move?</h2>
+            <form action="#" method="post">
+                <label for="Username">Username:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Send</button>
+            </form>
+          
+        </section>
+        <div class="container">
+            <img src="../media/Breaking.jpg" />
+            <img src="../media/CambellLocking.jpg" />
+            <img src="../media/LiteFeet.jpg" />
+            <img src="../media/Tutting.jpg" />
+            <img src="../media/Popping .jpg" />
+          </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Dance Tutoring</p>
+    </footer>
+  </body>
+</html>
