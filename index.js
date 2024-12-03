@@ -19,3 +19,6 @@ app.get("/", (req, res) => {
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
+
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));

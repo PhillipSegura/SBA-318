@@ -1,22 +1,16 @@
-const comments = [
+const dummyPost = [
   {
-    name: "Big Deadend",
-    age: "30",
-    location: "Mesa",
-    style: "Krump",
+    id: 1,
+    title: "First Post",
+    content: "This is the first post.",
+    author: "John Doe",
   },
   {
-    name: "King Charles",
-    age: "31",
-    location: "Phoenix",
-    style: "Chicago Footwork",
-  },
-
-  {
-    name: "Armani",
-    age: "29",
-    location: "West Phoenix",
-    style: "Popping",
+    id: 2,
+    title: "Second Post",
+    content: "This is the second post.",
+    author: "Jane Smith",
   },
 ];
-module.exports = comments;
+
+module.exports = { dummyPost };

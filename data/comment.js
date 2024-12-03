@@ -1,5 +1,22 @@
 const comments = [
-  { id: 1, author: "John Doe", content: "This is a great post!" },
-  { id: 2, author: "Jane Smith", content: "I agree with John." },
-  { id: 3, author: "Mike Johnson", content: "I disagree with John." },
+  {
+    name: "Big Deadend",
+    age: "30",
+    location: "Mesa",
+    style: "Krump",
+  },
+  {
+    name: "King Charles",
+    age: "31",
+    location: "Phoenix",
+    style: "Chicago Footwork",
+  },
+
+  {
+    name: "Armani",
+    age: "29",
+    location: "West Phoenix",
+    style: "Popping",
+  },
 ];
+module.exports = comments;
