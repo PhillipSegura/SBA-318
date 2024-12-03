@@ -27,24 +27,15 @@ router.post("/register", (req, res) => {
 });
 
 // DELETE
-router.delete("/comments/:id", (req, res) => {
-  const name = req.body.name;
-  // console.log("delete");
-  // console.log(comments);
-  // console.log(name);
-  console.log(index);
-  const index = comments.findIndex((comment) => comment.name === name);
-
-  if (index === -1) {
-    res.status(404).json({ error: "comment not found" });
-    return;
+router.delete("/comments/:index", (req, res) => {
+  const index = parseInt(req.params.index); // Parse the index from the request
+  if (index >= 0 && index < comments.length) {
+    comments.splice(index, 1); // Remove the comment from the array
+    res.redirect("/"); // Redirect back to home page after deletion
+  } else {
+    res.status(404).send("Comment not found");
   }
-  //console.log(comments, "before splice");
-  comments.splice(index, 1);
-  //console.log(comments);
-  res.redirect("/");
 });
-
 // PATCH
 router.patch("/", (req, res) => {
   const {} = req.body;

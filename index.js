@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
 const bodyParser = require("body-parser");
 const indexRouter = require("./routes/index");
 
@@ -19,6 +21,3 @@ app.get("/", (req, res) => {
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
-
-const methodOverride = require("method-override");
-app.use(methodOverride("_method"));

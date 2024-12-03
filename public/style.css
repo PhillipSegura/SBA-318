@@ -96,3 +96,7 @@ video.background-clip {
 .container img:hover {
   width: 25%;
 }
+
+form1.container {
+  background-color: #f0f8ff;
+}
