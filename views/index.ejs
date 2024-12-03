@@ -98,7 +98,7 @@
       /form> -->
           
         </section>
-<form1>
+<div class="form1">
   <ul>
     <% comments.forEach((element, index) => { %>
       <li>
@@ -106,13 +106,16 @@
         <strong>age:</strong><%= element.age %><br />
         <strong>location:</strong><%= element.location %><br />
         <strong>style:</strong><%= element.style %><br />
+        <form action="/comments/<%= index %>/edit" method="GET">
+          <button type="submit"> Edit</button>
+        </form>
         <form action="/comments/<%= index %>?_method=DELETE" method="POST">
           <button type="submit"> Delete</button>
         </form>
       </li>
       <% }) %>
   </ul>
-</form1>
+</div>
 
         <div class="container">
             <img src="../media/Breaking.jpg" />

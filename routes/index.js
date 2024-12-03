@@ -36,22 +36,46 @@ router.delete("/comments/:index", (req, res) => {
     res.status(404).send("Comment not found");
   }
 });
-// PATCH
-router.patch("/", (req, res) => {
-  const {} = req.body;
-  const index = comments.findIndex((comment) => comment.name === name);
 
-  if (index === -1) {
-    res.status(404).json({ error: "comment not found" });
-    return;
+// PUT
+router.put("/comments/:index", (req, res) => {
+  const index = parseInt(req.params.index); // Parse the index from the request
+  if (index >= 0 && index < comments.length) {
+    const updatedComment = {
+      name: req.body.name,
+      age: req.body.age,
+      location: req.body.location,
+      style: req.body.style,
+    };
+    comments[index] = updatedComment;
+    res.redirect("/"); // Redirect back to home page after update
+  } else {
+    res.status(404).send("Comment not found");
   }
-
-  comments[index].age = age;
-  comments[index].location = location;
-  comments[index].style = style;
-
-  res.redirect("/index");
 });
+
+router.get("/comments/:index/edit", (req, res) => {
+  const index = parseInt(req.params.index);
+  // Parse the index from the request
+  res.render("modify", { comment: comments[index], index: index });
+});
+
+// PATCH
+// router.patch("/comments/:index", (req, res) => {
+//   const {} = req.body;
+//   const index = comments.findIndex((comment) => comment.name === name);
+
+//   if (index === -1) {
+//     res.status(404).json({ error: "comment not found" });
+//     return;
+//   }
+
+//   comments[index].age = age;
+//   comments[index].location = location;
+//   comments[index].style = style;
+
+//   res.redirect("/index");
+// });
 
 // Query Parameters
 router.get("/search", (req, res) => {

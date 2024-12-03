@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/comments/<%= index %>?_method=PUT" method="POST"></form>
+    <label>
+      Name:
+      <input type="text" name="name" value="<%= comment.name %>" required />
+    </label>
+    <br />
+    <label>
+      Age:
+      <input type="text" name="name" value="<%= comment.age %>" required />
+    </label>
+    <br />
+    <label>
+      Location:
+      <input type="text" name="name" value="<%= comment.location %>" required />
+    </label>
+    <br />
+    <label>
+      Style:
+      <input type="text" name="name" value="<%= comment.style %>" required />
+    </label>
+    <br />
+    <input type="submit" value="update" />
+  </body>
+</html>
