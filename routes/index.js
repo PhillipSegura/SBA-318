@@ -54,7 +54,7 @@ router.put("/comments/:index", (req, res) => {
   }
 });
 
-router.get("/comments/:index", (req, res) => {
+router.get("/comments/:index/edit", (req, res) => {
   const index = parseInt(req.params.index);
   // Parse the index from the request
   res.render("modify", { comment: comments[index], index: index });

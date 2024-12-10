@@ -21,3 +21,8 @@ app.get("/", (req, res) => {
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
+
+// Add a 404 handler for undefined routes (Place this last)
+app.use((req, res) => {
+  res.status(404).send("Oops! That page doesn't exist.");
+});
