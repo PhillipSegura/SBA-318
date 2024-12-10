@@ -52,8 +52,8 @@ td {
   padding: 10px;
   text-align: center;
 }
-
-form {
+div.form1 {
+  background-color: rgb(240, 248, 255, 0.7);
   margin: 20px auto;
   width: 80%;
 }
@@ -84,7 +84,9 @@ video.background-clip {
   z-index: -1;
 }
 
-.container img {
+.examples img {
+  /* display: flex;
+  justify-content: space-evenly; */
   width: 10%;
   height: 100%;
   object-fit: cover;
@@ -93,10 +95,6 @@ video.background-clip {
   transition: all ease-in-out 0.5s;
 }
 
-.container img:hover {
-  width: 25%;
-}
-
-.form1 {
-  background-color: #f0f8ff;
+.examples img:hover {
+  width: 15%;
 }
